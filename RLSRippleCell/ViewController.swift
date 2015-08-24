@@ -37,6 +37,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.selectedBackgroundView = UIView()
         cell.selectedBackgroundView.backgroundColor = UIColor.clearColor()
         cell.textLabel!.text = " Touch Me "
+        cell.textLabel!.backgroundColor = UIColor.clearColor()
         return cell
     }
     

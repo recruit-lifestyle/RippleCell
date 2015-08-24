@@ -1,23 +1,23 @@
 //
 //  RLSRippleCell.swift
-//  
 //
 //  Created by Nari on 2015/08/19.
-//
+//  Copyright (c) 2015年 nari. All rights reserved.
 //
 
 
 import UIKit
 
 class RLSRippleCell: UITableViewCell {
-    var targetColor: UIColor!
-    var targetBGColor: UIColor!
-    var showDuration: NSTimeInterval!
-    private var circleView: UIView!
+    private var rippleView: UIView!
     private var touchedPoint: CGPoint!
-    private var bgView:UIView!
-    var radiusSmallLength: CGFloat!
-    var radiusLeargeLength: CGFloat!
+    private var backgroundRippleView:UIView!
+    private var isAnimation = false
+    var radiusSmallLength = CGFloat(0.0)
+    var radiusLeargeLength = CGFloat(0.0)
+    var rippleColor = UIColor(red: 101.0/255.0, green: 198.0/255.0, blue: 187.0/255.0, alpha: 0.9)
+    var backgroundRippleColor = UIColor(red: 200.0/255.0, green: 247.0/255.0, blue: 197.0/255.0, alpha: 1.0)
+    var showDuration = 0.6
     
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String!) {
@@ -57,73 +57,72 @@ class RLSRippleCell: UITableViewCell {
     }
     
     func setLayout(){
-        targetColor = UIColor(red: 101.0/255.0, green: 198.0/255.0, blue: 187.0/255.0, alpha: 0.9)
-        targetBGColor = UIColor(red: 200.0/255.0, green: 247.0/255.0, blue: 197.0/255.0, alpha: 1.0)
-        bgView = UIView(frame: CGRectMake(0, 0, self.frame.size.width, self.frame.size.height))
-        bgView.clipsToBounds = true
-        bgView.layer.masksToBounds = true
-        backgroundView = bgView
-        self.textLabel?.backgroundColor = UIColor.clearColor()
+        backgroundRippleView = UIView(frame: CGRectMake(0, 0, self.frame.size.width, self.frame.size.height))
+        backgroundRippleView.clipsToBounds = true
+        backgroundRippleView.layer.masksToBounds = true
+        backgroundView = backgroundRippleView
         touchedPoint = self.contentView.center
-        showDuration = 0.6
         self.layer.masksToBounds = true
         radiusSmallLength = self.frame.size.height * 5
         radiusLeargeLength = self.frame.size.width * 10
     }
     
     func animationWithCircleStart(){
-        showCircleView()
+        if(isAnimation){return}
+        isAnimation = true
+        showRippleView()
         showFadeBackgroundIn()
     }
     
     func animationWithCirleEnd(){
         self.removeFadeBackgroundOut()
-        self.removeCircleView()
+        self.removeRippleView()
     }
     
-    func showCircleView(){
-        circleView = UIView(frame: CGRectMake(0, 0, radiusLeargeLength, radiusLeargeLength))
-        circleView.center = touchedPoint
-        circleView.layer.cornerRadius = radiusLeargeLength / 2
-        circleView.layer.masksToBounds = true
-        circleView.backgroundColor = targetColor
-        self.selectedBackgroundView.addSubview(circleView)
+    func showRippleView(){
+        rippleView = UIView(frame: CGRectMake(0, 0, radiusLeargeLength, radiusLeargeLength))
+        rippleView.center = touchedPoint
+        rippleView.layer.cornerRadius = radiusLeargeLength / 2
+        rippleView.layer.masksToBounds = true
+        rippleView.backgroundColor = rippleColor
+        self.selectedBackgroundView.addSubview(rippleView)
         
-        circleView.transform = CGAffineTransformMakeScale(0, 0)
+        rippleView.transform = CGAffineTransformMakeScale(0, 0)
         UIView.animateWithDuration(showDuration,
             delay: 0,
             options: UIViewAnimationOptions.CurveEaseIn,
             animations: { () -> Void in
-                self.circleView.center = self.touchedPoint
-                self.circleView.transform = CGAffineTransformIdentity
+                self.rippleView.center = self.touchedPoint
+                self.rippleView.transform = CGAffineTransformIdentity
             }, completion: nil)
         
     }
     
-    func removeCircleView(){
+    func removeRippleView(){
         UIView.animateWithDuration(showDuration,
             delay: 0, options: UIViewAnimationOptions.CurveEaseIn,
             animations: { () -> Void in
-                self.circleView.alpha = 0.0
-                self.circleView.layer.cornerRadius = self.frame.size.width / 3
-                self.circleView.frame = CGRectMake(self.touchedPoint.x - self.radiusLeargeLength / 2, self.touchedPoint.y - self.radiusLeargeLength / 2, self.radiusLeargeLength, self.radiusLeargeLength)
+                self.rippleView.alpha = 0.0
+                self.rippleView.layer.cornerRadius = self.frame.size.width / 3
+                self.rippleView.frame = CGRectMake(self.touchedPoint.x - self.radiusLeargeLength / 2, self.touchedPoint.y - self.radiusLeargeLength / 2, self.radiusLeargeLength, self.radiusLeargeLength)
             }) { (animated) -> Void in
-                self.circleView.removeFromSuperview()
+                self.rippleView.removeFromSuperview()
+                self.isAnimation = false
         }
     }
     
     func showFadeBackgroundIn(){
-        bgView.backgroundColor = targetBGColor
-        bgView.alpha = 0.0
+        backgroundRippleView.backgroundColor = backgroundRippleColor
+        backgroundRippleView.alpha = 0.0
         UIView.animateWithDuration(showDuration, animations: { () -> Void in
-            self.bgView.alpha = 1.0
+            self.backgroundRippleView.alpha = 1.0
             }) { (animated) -> Void in
                 self.animationWithCirleEnd()
         }
     }
     
     func removeFadeBackgroundOut(){
-        self.bgView.alpha = 0.0
+        self.backgroundRippleView.alpha = 0.0
     }
     
 }
