@@ -9,14 +9,16 @@
 import UIKit
 
 class RLSRippleCell: UITableViewCell {
-    var targetColor: UIColor!
-    var targetBGColor: UIColor!
+    var targetColor = UIColor(red: 101.0/255.0, green: 198.0/255.0, blue: 187.0/255.0, alpha: 0.9)
+    var targetBackGroundColor = UIColor(red: 200.0/255.0, green: 247.0/255.0, blue: 197.0/255.0, alpha: 1.0)
     var showDuration: NSTimeInterval!
-    private var circleView: UIView!
-    private var touchedPoint: CGPoint!
-    private var bgView:UIView!
-    var radiusSmallLength: CGFloat!
-    var radiusLeargeLength: CGFloat!
+    private var touchedPoint = CGPointZero
+    private var targetView = UIView()
+    private var targetBackGroundView = UIView()
+    private var isFinishBackgroundAnimation = true
+    private var isFinishTargetAnimaiton = true
+    var radiusSmallLength = CGFloat(0.0)
+    var radiusLargeLength = CGFloat(0.0)
 
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String!) {
@@ -51,78 +53,83 @@ class RLSRippleCell: UITableViewCell {
     }
     
     override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
-        animationWithCircleStart()
+        if(isFinishTargetAnimaiton && isFinishBackgroundAnimation){
+            isFinishBackgroundAnimation = false
+            isFinishTargetAnimaiton = false
+            animationWithCircleStart()
+        }
+        
         super.touchesEnded(touches, withEvent: event)
     }
     
     func setLayout(){
-        targetColor = UIColor(red: 101.0/255.0, green: 198.0/255.0, blue: 187.0/255.0, alpha: 0.9)
-        targetBGColor = UIColor(red: 200.0/255.0, green: 247.0/255.0, blue: 197.0/255.0, alpha: 1.0)
-        bgView = UIView(frame: CGRectMake(0, 0, self.frame.size.width, self.frame.size.height))
-        bgView.clipsToBounds = true
-        bgView.layer.masksToBounds = true
-        backgroundView = bgView
+        targetBackGroundView = UIView(frame: CGRectMake(0, 0, self.frame.size.width, self.frame.size.height))
+        targetBackGroundView.clipsToBounds = true
+        targetBackGroundView.layer.masksToBounds = true
+        backgroundView = targetBackGroundView
         self.textLabel?.backgroundColor = UIColor.clearColor()
         touchedPoint = self.contentView.center
         showDuration = 0.6
         self.layer.masksToBounds = true
         radiusSmallLength = self.frame.size.height * 5
-        radiusLeargeLength = self.frame.size.width * 10
+        radiusLargeLength = self.frame.size.width * 10
     }
     
     func animationWithCircleStart(){
-        showCircleView()
+        showTargetView()
         showFadeBackgroundIn()
     }
     
     func animationWithCirleEnd(){
         self.removeFadeBackgroundOut()
-        self.removeCircleView()
+        self.removeTargetView()
     }
     
-    func showCircleView(){
-        circleView = UIView(frame: CGRectMake(0, 0, radiusLeargeLength, radiusLeargeLength))
-        circleView.center = touchedPoint
-        circleView.layer.cornerRadius = radiusLeargeLength / 2
-        circleView.layer.masksToBounds = true
-        circleView.backgroundColor = targetColor
-        self.selectedBackgroundView.addSubview(circleView)
+    func showTargetView(){
+        targetView = UIView(frame: CGRectMake(0, 0, radiusLargeLength, radiusLargeLength))
+        targetView.center = touchedPoint
+        targetView.layer.cornerRadius = radiusLargeLength / 2
+        targetView.layer.masksToBounds = true
+        targetView.backgroundColor = targetColor
+        self.selectedBackgroundView.addSubview(targetView)
         
-        circleView.transform = CGAffineTransformMakeScale(0, 0)
+        targetView.transform = CGAffineTransformMakeScale(0, 0)
         UIView.animateWithDuration(showDuration,
             delay: 0,
             options: UIViewAnimationOptions.CurveEaseIn,
             animations: { () -> Void in
-                self.circleView.center = self.touchedPoint
-                self.circleView.transform = CGAffineTransformIdentity
+                self.targetView.center = self.touchedPoint
+                self.targetView.transform = CGAffineTransformIdentity
         }, completion: nil)
-        
     }
     
-    func removeCircleView(){
+    func removeTargetView(){
         UIView.animateWithDuration(showDuration,
             delay: 0, options: UIViewAnimationOptions.CurveEaseIn,
             animations: { () -> Void in
-                self.circleView.alpha = 0.0
-                self.circleView.layer.cornerRadius = self.frame.size.width / 3
-                self.circleView.frame = CGRectMake(self.touchedPoint.x - self.radiusLeargeLength / 2, self.touchedPoint.y - self.radiusLeargeLength / 2, self.radiusLeargeLength, self.radiusLeargeLength)
+                self.targetView.alpha = 0.0
+                self.targetView.layer.cornerRadius = self.frame.size.width / 3
+                self.targetView.frame = CGRectMake(self.touchedPoint.x - self.radiusLargeLength / 2, self.touchedPoint.y - self.radiusLargeLength / 2, self.radiusLargeLength, self.radiusLargeLength)
             }) { (animated) -> Void in
-                self.circleView.removeFromSuperview()
+                self.targetView.removeFromSuperview()
+                self.isFinishTargetAnimaiton = true
         }
     }
     
     func showFadeBackgroundIn(){
-        bgView.backgroundColor = targetBGColor
-        bgView.alpha = 0.0
+        targetBackGroundView.backgroundColor = targetBackGroundColor
+        targetBackGroundView.alpha = 0.0
         UIView.animateWithDuration(showDuration, animations: { () -> Void in
-            self.bgView.alpha = 1.0
+            self.targetBackGroundView.alpha = 1.0
         }) { (animated) -> Void in
             self.animationWithCirleEnd()
+
         }
     }
     
     func removeFadeBackgroundOut(){
-        self.bgView.alpha = 0.0
+        self.targetBackGroundView.alpha = 0.0
+        self.isFinishBackgroundAnimation = true
     }
 
 }
