@@ -62,7 +62,7 @@ class RLSRippleCell: UITableViewCell {
         super.touchesEnded(touches, withEvent: event)
     }
     
-    func setLayout(){
+    private func setLayout(){
         targetBackGroundView = UIView(frame: CGRectMake(0, 0, self.frame.size.width, self.frame.size.height))
         targetBackGroundView.clipsToBounds = true
         targetBackGroundView.layer.masksToBounds = true
@@ -85,7 +85,7 @@ class RLSRippleCell: UITableViewCell {
         self.removeTargetView()
     }
     
-    func showTargetView(){
+    private func showTargetView(){
         targetView = UIView(frame: CGRectMake(0, 0, radiusLargeLength, radiusLargeLength))
         targetView.center = touchedPoint
         targetView.layer.cornerRadius = radiusLargeLength / 2
@@ -103,7 +103,7 @@ class RLSRippleCell: UITableViewCell {
         }, completion: nil)
     }
     
-    func removeTargetView(){
+    private func removeTargetView(){
         UIView.animateWithDuration(showDuration,
             delay: 0, options: UIViewAnimationOptions.CurveEaseIn,
             animations: { () -> Void in
@@ -116,7 +116,7 @@ class RLSRippleCell: UITableViewCell {
         }
     }
     
-    func showFadeBackgroundIn(){
+    private func showFadeBackgroundIn(){
         targetBackGroundView.backgroundColor = targetBackGroundColor
         targetBackGroundView.alpha = 0.0
         UIView.animateWithDuration(showDuration, animations: { () -> Void in
@@ -127,7 +127,7 @@ class RLSRippleCell: UITableViewCell {
         }
     }
     
-    func removeFadeBackgroundOut(){
+    private func removeFadeBackgroundOut(){
         self.targetBackGroundView.alpha = 0.0
         self.isFinishBackgroundAnimation = true
     }
