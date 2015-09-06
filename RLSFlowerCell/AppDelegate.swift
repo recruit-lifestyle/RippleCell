@@ -2,8 +2,7 @@
 //  AppDelegate.swift
 //  RLSFlowerCell
 //
-//  Created by nari on 2015/06/29.
-//  Copyright (c) 2015年 Nari. All rights reserved.
+//  Copyright 2015 RECRUIT LIFESTYLE CO., LTD.
 //
 
 import UIKit
