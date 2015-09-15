@@ -1,0 +1,430 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		877451741BA805B700C1DF74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877451731BA805B700C1DF74 /* AppDelegate.swift */; };
+		877451761BA805B700C1DF74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877451751BA805B700C1DF74 /* ViewController.swift */; };
+		877451791BA805B700C1DF74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 877451771BA805B700C1DF74 /* Main.storyboard */; };
+		8774517B1BA805B700C1DF74 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8774517A1BA805B700C1DF74 /* Images.xcassets */; };
+		8774517E1BA805B700C1DF74 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8774517C1BA805B700C1DF74 /* LaunchScreen.xib */; };
+		8774518A1BA805B700C1DF74 /* RippleCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877451891BA805B700C1DF74 /* RippleCellTests.swift */; };
+		87B962151BA8078900167779 /* RippleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B962141BA8078900167779 /* RippleCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		877451841BA805B700C1DF74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 877451661BA805B700C1DF74 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8774516D1BA805B700C1DF74;
+			remoteInfo = RippleCell;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8774516E1BA805B700C1DF74 /* RippleCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RippleCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		877451721BA805B700C1DF74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		877451731BA805B700C1DF74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		877451751BA805B700C1DF74 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		877451781BA805B700C1DF74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8774517A1BA805B700C1DF74 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8774517D1BA805B700C1DF74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		877451831BA805B700C1DF74 /* RippleCellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RippleCellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		877451881BA805B700C1DF74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		877451891BA805B700C1DF74 /* RippleCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RippleCellTests.swift; sourceTree = "<group>"; };
+		87B962141BA8078900167779 /* RippleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RippleCell.swift; path = ../RippleCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8774516B1BA805B700C1DF74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		877451801BA805B700C1DF74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		877451651BA805B700C1DF74 = {
+			isa = PBXGroup;
+			children = (
+				877451701BA805B700C1DF74 /* RippleCell */,
+				877451861BA805B700C1DF74 /* RippleCellTests */,
+				8774516F1BA805B700C1DF74 /* Products */,
+				87B962141BA8078900167779 /* RippleCell.swift */,
+			);
+			sourceTree = "<group>";
+		};
+		8774516F1BA805B700C1DF74 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8774516E1BA805B700C1DF74 /* RippleCell.app */,
+				877451831BA805B700C1DF74 /* RippleCellTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		877451701BA805B700C1DF74 /* RippleCell */ = {
+			isa = PBXGroup;
+			children = (
+				877451731BA805B700C1DF74 /* AppDelegate.swift */,
+				877451751BA805B700C1DF74 /* ViewController.swift */,
+				877451771BA805B700C1DF74 /* Main.storyboard */,
+				8774517A1BA805B700C1DF74 /* Images.xcassets */,
+				8774517C1BA805B700C1DF74 /* LaunchScreen.xib */,
+				877451711BA805B700C1DF74 /* Supporting Files */,
+			);
+			path = RippleCell;
+			sourceTree = "<group>";
+		};
+		877451711BA805B700C1DF74 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				877451721BA805B700C1DF74 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		877451861BA805B700C1DF74 /* RippleCellTests */ = {
+			isa = PBXGroup;
+			children = (
+				877451891BA805B700C1DF74 /* RippleCellTests.swift */,
+				877451871BA805B700C1DF74 /* Supporting Files */,
+			);
+			path = RippleCellTests;
+			sourceTree = "<group>";
+		};
+		877451871BA805B700C1DF74 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				877451881BA805B700C1DF74 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8774516D1BA805B700C1DF74 /* RippleCell */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8774518D1BA805B700C1DF74 /* Build configuration list for PBXNativeTarget "RippleCell" */;
+			buildPhases = (
+				8774516A1BA805B700C1DF74 /* Sources */,
+				8774516B1BA805B700C1DF74 /* Frameworks */,
+				8774516C1BA805B700C1DF74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RippleCell;
+			productName = RippleCell;
+			productReference = 8774516E1BA805B700C1DF74 /* RippleCell.app */;
+			productType = "com.apple.product-type.application";
+		};
+		877451821BA805B700C1DF74 /* RippleCellTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 877451901BA805B700C1DF74 /* Build configuration list for PBXNativeTarget "RippleCellTests" */;
+			buildPhases = (
+				8774517F1BA805B700C1DF74 /* Sources */,
+				877451801BA805B700C1DF74 /* Frameworks */,
+				877451811BA805B700C1DF74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				877451851BA805B700C1DF74 /* PBXTargetDependency */,
+			);
+			name = RippleCellTests;
+			productName = RippleCellTests;
+			productReference = 877451831BA805B700C1DF74 /* RippleCellTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		877451661BA805B700C1DF74 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = nari;
+				TargetAttributes = {
+					8774516D1BA805B700C1DF74 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					877451821BA805B700C1DF74 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 8774516D1BA805B700C1DF74;
+					};
+				};
+			};
+			buildConfigurationList = 877451691BA805B700C1DF74 /* Build configuration list for PBXProject "RippleCell" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 877451651BA805B700C1DF74;
+			productRefGroup = 8774516F1BA805B700C1DF74 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8774516D1BA805B700C1DF74 /* RippleCell */,
+				877451821BA805B700C1DF74 /* RippleCellTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8774516C1BA805B700C1DF74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				877451791BA805B700C1DF74 /* Main.storyboard in Resources */,
+				8774517E1BA805B700C1DF74 /* LaunchScreen.xib in Resources */,
+				8774517B1BA805B700C1DF74 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		877451811BA805B700C1DF74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8774516A1BA805B700C1DF74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87B962151BA8078900167779 /* RippleCell.swift in Sources */,
+				877451761BA805B700C1DF74 /* ViewController.swift in Sources */,
+				877451741BA805B700C1DF74 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8774517F1BA805B700C1DF74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8774518A1BA805B700C1DF74 /* RippleCellTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		877451851BA805B700C1DF74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8774516D1BA805B700C1DF74 /* RippleCell */;
+			targetProxy = 877451841BA805B700C1DF74 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		877451771BA805B700C1DF74 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				877451781BA805B700C1DF74 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8774517C1BA805B700C1DF74 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8774517D1BA805B700C1DF74 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8774518B1BA805B700C1DF74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8774518C1BA805B700C1DF74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8774518E1BA805B700C1DF74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RippleCell/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8774518F1BA805B700C1DF74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RippleCell/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		877451911BA805B700C1DF74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RippleCellTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RippleCell.app/RippleCell";
+			};
+			name = Debug;
+		};
+		877451921BA805B700C1DF74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RippleCellTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RippleCell.app/RippleCell";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		877451691BA805B700C1DF74 /* Build configuration list for PBXProject "RippleCell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8774518B1BA805B700C1DF74 /* Debug */,
+				8774518C1BA805B700C1DF74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8774518D1BA805B700C1DF74 /* Build configuration list for PBXNativeTarget "RippleCell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8774518E1BA805B700C1DF74 /* Debug */,
+				8774518F1BA805B700C1DF74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		877451901BA805B700C1DF74 /* Build configuration list for PBXNativeTarget "RippleCellTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				877451911BA805B700C1DF74 /* Debug */,
+				877451921BA805B700C1DF74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 877451661BA805B700C1DF74 /* Project object */;
+}

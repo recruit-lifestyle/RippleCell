@@ -1,15 +1,15 @@
 //
-//  RLSFlowerCellTests.swift
-//  RLSFlowerCellTests
+//  RippleCellTests.swift
+//  RippleCellTests
 //
-//  Created by nari on 2015/06/29.
-//  Copyright (c) 2015年 Nari. All rights reserved.
+//  Created by 岩渕響聖 on 2015/09/15.
+//  Copyright (c) 2015年 nari. All rights reserved.
 //
 
 import UIKit
 import XCTest
 
-class RLSFlowerCellTests: XCTestCase {
+class RippleCellTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

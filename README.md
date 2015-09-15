@@ -1,9 +1,9 @@
-#RLSRippleCell
+#RippleCell
 
 Swift subclass of the UITableViewCell.
 
 #Screenshot
-![RLSRippleCell](sample.gif)
+![RippleCell](sample.gif)
 
 ## Requirements
 
@@ -13,7 +13,7 @@ Swift subclass of the UITableViewCell.
 
 #Installation
 
-Just add the `RLSRippleCell` folder to your project.
+Just add the `RippleCell` folder to your project.
 
 #Usage
 There is a need to set up your own color `targetColor` and `targetBGcolor` property of the cell.
@@ -21,7 +21,7 @@ The targetColor will change to ripple like from touched point in the cell.
 
 1. Create a new UITableViewCell in your storyboard or nib.
 
-2. Set the class of the UITableViewCell to RLSRippleCell in your Storyboard or nib.
+2. Set the class of the UITableViewCell to RippleCell in your Storyboard or nib.
 
 3. Set `targetColor` and `targetBGcolor` for the cell.
 
@@ -32,7 +32,7 @@ The targetColor will change to ripple like from touched point in the cell.
 
 ``` swift
 func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier("MyCell", forIndexPath: indexPath) as! RLSRippleCell
+    let cell = tableView.dequeueReusableCellWithIdentifier("MyCell", forIndexPath: indexPath) as! RippleCell
     cell.selectedBackgroundView = UIView()
     cell.selectedBackgroundView.backgroundColor = UIColor.clearColor()
     cell.textLabel!.text = " Touch Me "
@@ -44,9 +44,9 @@ func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexP
 
 ## Credits
 
-RLSRippleCell is owned and maintained by [RECRUIT LIFESTYLE CO., LTD.](http://www.recruit-lifestyle.co.jp/)
+RippleCell is owned and maintained by [RECRUIT LIFESTYLE CO., LTD.](http://www.recruit-lifestyle.co.jp/)
 
-RLSRippleCell was originally created by [Narimasa Iwabuchi](https://github.com/NariFrow)  
+RippleCell was originally created by [Narimasa Iwabuchi](https://github.com/NariFrow)  
 
 
 ##License

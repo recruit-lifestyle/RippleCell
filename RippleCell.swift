@@ -1,13 +1,13 @@
 //
-//  RLSRippleCell.swift
-//  RLSRippleCell
+//  RippleCell.swift
+//  RippleCell
 //
 //  Copyright 2015 RECRUIT LIFESTYLE CO., LTD.
 //
 
 import UIKit
 
-class RLSRippleCell: UITableViewCell {
+class RippleCell: UITableViewCell {
     var targetColor = UIColor(red: 101.0/255.0, green: 198.0/255.0, blue: 187.0/255.0, alpha: 0.9)
     var targetBackGroundColor = UIColor(red: 200.0/255.0, green: 247.0/255.0, blue: 197.0/255.0, alpha: 1.0)
     var showDuration: NSTimeInterval!
@@ -18,13 +18,13 @@ class RLSRippleCell: UITableViewCell {
     private var isFinishTargetAnimaiton = true
     var radiusSmallLength = CGFloat(0.0)
     var radiusLargeLength = CGFloat(0.0)
-
+    
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String!) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setLayout()
     }
-
+    
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -33,7 +33,7 @@ class RLSRippleCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-     override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     
@@ -46,7 +46,7 @@ class RLSRippleCell: UITableViewCell {
         touchedPoint = touch.locationInView(self)
         super.touchesBegan(touches, withEvent: event)
     }
-
+    
     override func touchesCancelled(touches: Set<NSObject>!, withEvent event: UIEvent!) {
         super.touchesCancelled(touches, withEvent: event)
     }
@@ -99,7 +99,7 @@ class RLSRippleCell: UITableViewCell {
             animations: { () -> Void in
                 self.targetView.center = self.touchedPoint
                 self.targetView.transform = CGAffineTransformIdentity
-        }, completion: nil)
+            }, completion: nil)
     }
     
     private func removeTargetView(){
@@ -120,9 +120,9 @@ class RLSRippleCell: UITableViewCell {
         targetBackGroundView.alpha = 0.0
         UIView.animateWithDuration(showDuration, animations: { () -> Void in
             self.targetBackGroundView.alpha = 1.0
-        }) { (animated) -> Void in
-            self.animationWithCirleEnd()
-
+            }) { (animated) -> Void in
+                self.animationWithCirleEnd()
+                
         }
     }
     
@@ -130,5 +130,5 @@ class RLSRippleCell: UITableViewCell {
         self.targetBackGroundView.alpha = 0.0
         self.isFinishBackgroundAnimation = true
     }
-
+    
 }
