@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'RippleCell_Example', :exclusive => true do
+  pod "RippleCell", :path => "../"
+end
+
+target 'RippleCell_Tests', :exclusive => true do
+  pod "RippleCell", :path => "../"
+
+  
+end
