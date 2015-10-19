@@ -1,0 +1,14 @@
+PODS:
+  - RippleCell (0.1.0)
+
+DEPENDENCIES:
+  - RippleCell (from `../`)
+
+EXTERNAL SOURCES:
+  RippleCell:
+    :path: ../
+
+SPEC CHECKSUMS:
+  RippleCell: a81e909f1b3098c3c4d58039e685f0b3ecd6f219
+
+COCOAPODS: 0.38.2

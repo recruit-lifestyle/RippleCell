@@ -1,0 +1,6 @@
+framework module RippleCell {
+  umbrella header "RippleCell-umbrella.h"
+
+  export *
+  module * { export * }
+}

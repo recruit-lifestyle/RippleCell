@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LFd-4q-L9a">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="6rF-nJ-jrI">
+            <objects>
+                <viewController id="LFd-4q-L9a" customClass="ViewController" customModule="RippleCell" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fpt-Im-fvJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="nCG-a4-9gV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Npg-iU-YbL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="QTD-MF-KXR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QTD-MF-KXR" firstAttribute="top" secondItem="Npg-iU-YbL" secondAttribute="top" id="3Ur-kd-Ytb"/>
+                            <constraint firstAttribute="trailing" secondItem="QTD-MF-KXR" secondAttribute="trailing" id="YPw-CD-Wg1"/>
+                            <constraint firstItem="QTD-MF-KXR" firstAttribute="leading" secondItem="Npg-iU-YbL" secondAttribute="leading" id="bCb-cM-I8H"/>
+                            <constraint firstItem="nCG-a4-9gV" firstAttribute="top" secondItem="QTD-MF-KXR" secondAttribute="bottom" id="pN5-GY-D1g"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="tableView" destination="QTD-MF-KXR" id="xQW-Jg-a62"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7lK-35-duk" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="273" y="298"/>
+        </scene>
+    </scenes>
+</document>
